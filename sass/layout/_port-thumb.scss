@@ -10,12 +10,17 @@
   position: absolute;
   top: 0;
   padding: 63px 24px;
-  transform: translateY(102%);
+  transform: translateY(110%);
+  height: 100%;
   font-size: 18px;
   line-height: 1.55;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--text-color);
   background-color: var(--accent-color);
+}
+.img-port {
+  @media screen and (min-width: 1) {
+  }
 }
 .port-title {
   font-weight: 700;

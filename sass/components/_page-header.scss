@@ -1,14 +1,7 @@
 header {
   border-bottom: 1px solid #ececec;
   height: 80px;
-  max-width: 480px;
   margin: 0 auto;
-  @media screen and (min-width: 768px) {
-    max-width: 768px;
-  }
-  @media screen and (min-width: 1200px) {
-    max-width: 1600px;
-  }
 }
 .nav-container__logo {
   font-family: "Raleway", sans-serif;

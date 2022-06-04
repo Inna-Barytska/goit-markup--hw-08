@@ -327,18 +327,7 @@ button {
 header {
   border-bottom: 1px solid #ececec;
   height: 80px;
-  max-width: 480px;
   margin: 0 auto;
-}
-@media screen and (min-width: 768px) {
-  header {
-    max-width: 768px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  header {
-    max-width: 1600px;
-  }
 }
 
 .nav-container__logo {
@@ -968,13 +957,13 @@ footer {
   padding: 118px 10px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero-mobile.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./images/hero-mobile.jpg);
   max-width: 480px;
   margin: 0 auto;
 }
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .section-hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero-mob-2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./images/hero-mob-2x.jpg);
   }
 }
 @media screen and (min-width: 480px) {
@@ -1098,6 +1087,9 @@ footer {
   display: flex;
   flex-wrap: wrap;
 }
+.filter .filter:not(:last-child) {
+  margin-right: 8px;
+}
 @media screen and (min-width: 768px) {
   .filter {
     justify-content: center;
@@ -1120,7 +1112,6 @@ footer {
   cursor: pointer;
   letter-spacing: 0.03em;
   margin-right: 8px;
-  margin-bottom: 15px;
   border-radius: 4px;
   padding: 6px 22px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1129,6 +1120,11 @@ footer {
   background-color: var(--accent-color);
   color: var(--text-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .filter-list {
+    margin-bottom: 15px;
+  }
 }
 .filter-list .filter-list:hover,
 .filter-list .filter-list:focus {
@@ -1190,7 +1186,6 @@ footer {
 }
 
 .port-item {
-  width: 370px;
   margin-right: 30px;
   height: auto;
   margin: 0 auto;
@@ -1225,8 +1220,14 @@ footer {
 }
 
 .wrapper {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .wrapper {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .port-thumb {
@@ -1241,7 +1242,8 @@ footer {
   position: absolute;
   top: 0;
   padding: 63px 24px;
-  transform: translateY(102%);
+  transform: translateY(110%);
+  height: 100%;
   font-size: 18px;
   line-height: 1.55;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
