@@ -1,4 +1,8 @@
 .section-title {
-  @include font(36px, 700, 1.2, null);
-  margin-bottom: 50px;
+  @include font(28px, 700, 1.17, null);
+  margin-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    @include font(36px, 700, 1.2, null);
+    margin-bottom: 50px;
+  }
 }

@@ -131,14 +131,13 @@
 .label-link {
   color: var(--accent-color);
   text-decoration: 1px solid underline;
-  margin-left: 3px;
 }
 .check-label {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   color: var(--secondary-text-color);
   margin-bottom: 30px;
   &::before {
@@ -150,8 +149,10 @@
     background-repeat: no-repeat;
     background-size: contain;
     border: 1px solid #212121;
-    @media screen and (min-width: 320px) {
-    }
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
   }
   .input-checkbox:checked + &::before {
     background-color: var(--accent-color);

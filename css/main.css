@@ -291,15 +291,14 @@ button {
 .label-link {
   color: var(--accent-color);
   text-decoration: 1px solid underline;
-  margin-left: 3px;
 }
 
 .check-label {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   color: var(--secondary-text-color);
   margin-bottom: 30px;
 }
@@ -312,6 +311,12 @@ button {
   background-repeat: no-repeat;
   background-size: contain;
   border: 1px solid #212121;
+}
+@media screen and (min-width: 1200px) {
+  .check-label {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 .input-checkbox:checked + .check-label::before {
   background-color: var(--accent-color);
@@ -641,10 +646,18 @@ footer {
 }
 
 .section-title {
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 50px;
+  line-height: 1.17;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .section-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 50px;
+  }
 }
 
 .mob-menu {
@@ -803,6 +816,11 @@ footer {
   margin-top: 0;
   margin-bottom: 10px;
 }
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .desc-list__title {
+    text-align: center;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .desc-list {
@@ -957,13 +975,13 @@ footer {
   padding: 118px 10px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./images/hero-mobile.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-mobile.jpg);
   max-width: 480px;
   margin: 0 auto;
 }
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .section-hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./images/hero-mob-2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-mob-2x.jpg);
   }
 }
 @media screen and (min-width: 480px) {
@@ -973,19 +991,19 @@ footer {
 }
 @media screen and (min-width: 768px) {
   .section-hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero-tablet.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-tablet.jpg);
     max-width: 768px;
     padding: 118px 204px;
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .section-hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero-tablet-2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-tablet-2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
   .section-hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
@@ -993,7 +1011,7 @@ footer {
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .section-hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero-2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-2x.jpg);
   }
 }
 
@@ -1084,6 +1102,7 @@ footer {
 }
 
 .filter {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
@@ -1186,11 +1205,8 @@ footer {
 }
 
 .port-item {
-  margin-right: 30px;
   height: auto;
   margin: 0 auto;
-  /* width: calc((100%-60px) / 3); */
-  margin-bottom: 30px;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
@@ -1199,9 +1215,12 @@ footer {
 .port-item:hover, .port-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .port-item {
     align-items: center;
+  }
+  .port-item:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 768px) {
