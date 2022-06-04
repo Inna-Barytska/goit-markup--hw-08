@@ -19,8 +19,8 @@
   background-color: var(--accent-color);
 }
 .img-port {
-  @media screen and (min-width: 1) {
-  }
+  width: 100%;
+  display: block;
 }
 .port-title {
   font-weight: 700;
